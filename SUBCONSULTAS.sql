@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 
 --Ejercicio 3
@@ -20,3 +22,4 @@ WHERE e.EmployeeID NOT IN (
     WHERE r.RegionDescription = 'Northern'
 )
 ORDER BY e.LastName DESC;
+>>>>>>> e982e03c49374a9657a4eb9ae38afe5175ba3b38
