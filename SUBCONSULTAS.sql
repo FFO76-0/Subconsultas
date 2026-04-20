@@ -84,3 +84,42 @@ WHERE RegionID IN (
     FROM Region
     WHERE RegionDescription = 'Western'
 );
+
+
+
+--consulta 13  Listar el nombre de los empleados y el total de pedidos que ha atendido
+SELECT 
+    e.FirstName + ' ' + e.LastName AS Empleado,
+    COUNT(o.OrderID) AS TotalPedidos
+FROM Employees e
+LEFT JOIN Orders o 
+    ON e.EmployeeID = o.EmployeeID
+GROUP BY e.FirstName, e.LastName;
+
+--consulta 14 Muestra los títulos de los libros cuya categoría contenga la palabra Cooking
+SELECT title
+FROM titles
+WHERE type LIKE '%cook%';
+
+--consulta 15
+SELECT title, price
+FROM titles
+WHERE price IS NOT NULL
+AND price <= (
+    SELECT AVG(price)
+    FROM titles
+    WHERE price IS NOT NULL
+);
+
+--consulta 16
+SELECT title, price
+FROM titles
+WHERE price = (
+    SELECT MAX(price)
+    FROM titles
+    WHERE price IS NOT NULL
+);
+ 
+
+
+
