@@ -27,7 +27,7 @@ ORDER BY e.LastName DESC;
 
 
 
--- Consulta 8
+-- Consulta 5
 
 SELECT OrderID, CustomerID, ShipCountry
 FROM Orders
