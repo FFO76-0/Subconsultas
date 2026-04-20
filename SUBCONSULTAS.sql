@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 
 
 --Ejercicio 3
@@ -22,6 +21,8 @@ WHERE e.EmployeeID NOT IN (
     WHERE r.RegionDescription = 'Northern'
 )
 ORDER BY e.LastName DESC;
+<<<<<<< HEAD
+=======
 >>>>>>> e982e03c49374a9657a4eb9ae38afe5175ba3b38
 <<<<<<< HEAD
 -- 8. Lista el nombre de los empleados que pertenezcan a la región Southern
@@ -40,6 +41,7 @@ WHERE EmployeeID IN (
         )
     )
 );
+>>>>>>> 541d4ff792bad77420cc53714f302e173947d602
 
 -- 9. ID de la orden, fecha de pedido, fecha de entrega y flete de "United Package"
 SELECT OrderID, OrderDate, ShippedDate, Freight
