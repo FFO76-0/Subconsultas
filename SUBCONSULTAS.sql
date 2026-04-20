@@ -23,3 +23,12 @@ WHERE e.EmployeeID NOT IN (
 )
 ORDER BY e.LastName DESC;
 >>>>>>> e982e03c49374a9657a4eb9ae38afe5175ba3b38
+
+
+
+
+-- Consulta 8
+
+SELECT OrderID, CustomerID, ShipCountry
+FROM Orders
+WHERE ShipCountry IN ('Sweden', 'Spain');
