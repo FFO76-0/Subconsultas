@@ -73,3 +73,14 @@ WHERE SupplierID IN (
     FROM Suppliers
     WHERE CompanyName LIKE 'L%'
 );
+
+
+-- Consulta 7  Muestra los nombres de todos los territorios que estén en la region Western
+
+SELECT TerritoryDescription
+FROM Territories
+WHERE RegionID IN (
+    SELECT RegionID
+    FROM Region
+    WHERE RegionDescription = 'Western'
+);
