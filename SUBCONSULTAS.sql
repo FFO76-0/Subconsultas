@@ -1,4 +1,22 @@
+---Ejercicio 1
+SELECT 
+    FirstName + ' ' + LastName AS Nombre
+FROM Employees
 
+UNION
+
+SELECT 
+    ContactName AS Nombre
+FROM Customers;
+
+---Ejercicio 2
+SELECT FirstName AS Nombre
+FROM Employees
+
+INTERSECT
+
+SELECT ContactName
+FROM Customers;
 
 
 --Ejercicio 3
