@@ -22,9 +22,6 @@ WHERE e.EmployeeID NOT IN (
 )
 ORDER BY e.LastName DESC;
 <<<<<<< HEAD
-=======
->>>>>>> e982e03c49374a9657a4eb9ae38afe5175ba3b38
-<<<<<<< HEAD
 -- 8. Lista el nombre de los empleados que pertenezcan a la región Southern
 SELECT FirstName + ' ' + LastName AS NombreEmpleado
 FROM Employees
@@ -64,3 +61,15 @@ FROM Orders
 WHERE ShipCountry IN ('Sweden', 'Spain');
 
 >>>>>>> 6aa1f32462a12e6d7c232f192fe5f02f1c2a4e8a
+
+
+
+-- Consulta 6  Cuáles son los productos cuyo nombre de proveedor (Company name) inicie con L.
+
+SELECT ProductID, ProductName, SupplierID
+FROM Products
+WHERE SupplierID IN (
+    SELECT SupplierID
+    FROM Suppliers
+    WHERE CompanyName LIKE 'L%'
+);
